@@ -79,7 +79,7 @@ app.get("secret", passport.authenticate("jwt", { session: false }), (req, res) =
 });
 
 // 临时路由调试Bearer + token是否有效
-app.post(
+app.get(
   "/secretDebug",
   function(req, res, next) {
     console.log(req.get("Authorization"));
